@@ -138,15 +138,15 @@ danswer = xgb.DMatrix(data_to_answer_e[:,1:])
 
 
 bst = xgb.Booster(param)  # init model
-bst.load_model('test1m.model')
+bst.load_model('test3m.model')
 
 
 # In[ ]:
 
 
-#start = time()
+start = time()
 answers = bst.predict(danswer)
-#print('time required to answer: ', time() - start)
+print('time required to answer: ', time() - start)
 
 
 # In[ ]:
